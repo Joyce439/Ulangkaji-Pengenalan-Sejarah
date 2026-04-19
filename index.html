@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pelan Belajar 7 Hari — Seni Oriental</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --ink: #1a1208;
+    --paper: #faf6ee;
+    --gold: #c8922a;
+    --gold-light: #e8c87a;
+    --red: #9b2335;
+    --jade: #3a6b55;
+    --muted: #8a7a60;
+    --line: #e0d4b8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* Decorative top border */
+  .top-border {
+    height: 6px;
+    background: linear-gradient(90deg, var(--red), var(--gold), var(--jade), var(--gold), var(--red));
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    padding: 48px 24px 36px;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 2.5px solid var(--gold);
+    border-radius: 50%;
+    margin-bottom: 18px;
+    font-size: 26px;
+    color: var(--gold);
+    position: relative;
+  }
+  .seal::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    border: 1px solid var(--gold-light);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .method-tag {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 2px;
+  }
+
+  /* Framework Banner */
+  .framework {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 28px 24px;
+    border-bottom: 1px solid var(--line);
+    background: #f5f0e5;
+  }
+
+  .framework-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 28px;
+    text-align: center;
+    position: relative;
+  }
+
+  .framework-step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 18px;
+  }
+
+  .step-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .step-1 .step-num { background: var(--red); color: white; }
+  .step-2 .step-num { background: var(--gold); color: white; }
+  .step-3 .step-num { background: var(--jade); color: white; }
+
+  .step-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+
+  .step-desc {
+    font-size: 11px;
+    color: var(--muted);
+    max-width: 100px;
+  }
+
+  /* Main content */
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 36px 24px 60px;
+  }
+
+  /* Objective box */
+  .objective-box {
+    border: 1.5px solid var(--gold);
+    padding: 20px 24px;
+    margin-bottom: 36px;
+    position: relative;
+    background: white;
+  }
+
+  .objective-box::before {
+    content: 'MATLAMAT PINTAR (SMART)';
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    background: white;
+    padding: 0 8px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .smart-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .smart-item {
+    text-align: center;
+  }
+
+  .smart-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .smart-word {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .smart-text {
+    font-size: 11px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* Day cards */
+  .day-card {
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    background: white;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+
+  .day-card:hover {
+    box-shadow: 4px 4px 0 var(--gold-light);
+  }
+
+  .day-header {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .day-number {
+    width: 72px;
+    min-width: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 8px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .day-num-big {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .day-num-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .day-title-area {
+    flex: 1;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .day-phase-badge {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    width: fit-content;
+  }
+
+  .phase-input { background: #fce8e8; color: var(--red); }
+  .phase-digest { background: #fef5e0; color: #b8860b; }
+  .phase-output { background: #e8f5ee; color: var(--jade); }
+  .phase-mixed { background: #e8eef5; color: #2a5090; }
+
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+
+  .day-focus {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Day 1 = red, 2 = darker, etc. */
+  .day-1 .day-number { background: var(--red); color: white; }
+  .day-2 .day-number { background: #8b4513; color: white; }
+  .day-3 .day-number { background: var(--gold); color: white; }
+  .day-4 .day-number { background: #2e7d32; color: white; }
+  .day-5 .day-number { background: #1565c0; color: white; }
+  .day-6 .day-number { background: #6a1b9a; color: white; }
+  .day-7 .day-number { background: var(--ink); color: var(--gold-light); }
+
+  /* Day content */
+  .day-content {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .time-block {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed var(--line);
+  }
+
+  .time-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .time-label {
+    min-width: 80px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    padding-top: 2px;
+    text-align: right;
+  }
+
+  .time-content { flex: 1; }
+
+  .time-activity {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .time-detail {
+    font-size: 12px;
+    color: #6b6050;
+    line-height: 1.5;
+  }
+
+  .method-note {
+    display: inline-block;
+    background: #f5f5f0;
+    border-left: 3px solid var(--gold);
+    padding: 3px 8px;
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 5px;
+    font-style: italic;
+  }
+
+  /* Topics grid */
+  .topics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .topic-chip {
+    background: #f8f4ec;
+    border: 1px solid var(--line);
+    padding: 5px 10px;
+    font-size: 11px;
+    color: var(--ink);
+    border-radius: 2px;
+  }
+
+  /* Artists section */
+  .artists-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .artist-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 500;
+    border: 1px solid;
+  }
+
+  .artist-west { background: #fce8e8; border-color: #f0b0b0; color: #8b1a1a; }
+  .artist-islam { background: #e8f0fe; border-color: #b0c8f0; color: #1a3c8b; }
+  .artist-china { background: #fff3e0; border-color: #f0d070; color: #8b5e00; }
+  .artist-japan { background: #fce8f0; border-color: #f0b0c8; color: #8b1a4a; }
+  .artist-india { background: #e8fce8; border-color: #b0e0b0; color: #1a6b1a; }
+
+  /* Output checklist */
+  .checklist {
+    list-style: none;
+    margin-top: 6px;
+  }
+
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--ink);
+    padding: 4px 0;
+  }
+
+  .check-box {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    border: 1.5px solid var(--gold);
+    margin-top: 2px;
+    border-radius: 2px;
+  }
+
+  /* Virtual Gallery box */
+  .gallery-box {
+    background: linear-gradient(135deg, #1a1208 0%, #2d200a 100%);
+    color: var(--gold-light);
+    padding: 16px 20px;
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+
+  .gallery-box-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .gallery-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .gallery-link {
+    background: rgba(200, 146, 42, 0.2);
+    border: 1px solid rgba(200, 146, 42, 0.4);
+    padding: 4px 12px;
+    font-size: 11px;
+    color: var(--gold-light);
+    border-radius: 2px;
+  }
+
+  /* Tips section */
+  .tips-section {
+    margin-top: 36px;
+    padding: 24px;
+    border: 1.5px solid var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .tips-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+  }
+
+  .tips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .tip-item {
+    border-left: 2px solid var(--gold);
+    padding-left: 12px;
+  }
+
+  .tip-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+  }
+
+  .tip-text {
+    font-size: 11px;
+    color: #c8bca0;
+    line-height: 1.6;
+  }
+
+  /* Summary footer */
+  .summary-table {
+    margin-top: 36px;
+    border: 1px solid var(--line);
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+  }
+
+  .summary-table th {
+    background: var(--ink);
+    color: var(--gold-light);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .summary-table td {
+    padding: 10px 14px;
+    font-size: 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  .summary-table tr:last-child td { border-bottom: none; }
+
+  .phase-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.5rem; }
+    .framework { flex-direction: column; align-items: center; gap: 12px; }
+    .framework-step:not(:last-child)::after { content: '↓'; right: auto; bottom: -18px; top: auto; left: 50%; transform: translateX(-50%); }
+    .smart-grid { grid-template-columns: repeat(3, 1fr); }
+    .topics-grid { grid-template-columns: 1fr; }
+    .tips-grid { grid-template-columns: 1fr; }
+    .time-label { min-width: 60px; font-size: 10px; }
+  }
+
+  /* ========== 打卡功能样式 ========== */
+
+  /* 顶部进度面板 */
+  .checkin-panel {
+    background: white;
+    border-bottom: 1px solid var(--line);
+    padding: 20px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(26,18,8,0.08);
+  }
+
+  .checkin-panel-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .checkin-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .progress-bar-wrap {
+    flex: 1;
+    min-width: 120px;
+    background: var(--line);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--red), var(--gold), var(--jade));
+    border-radius: 4px;
+    transition: width 0.5s cubic-bezier(.4,0,.2,1);
+    width: 0%;
+  }
+
+  .progress-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  .dots-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .dot-day {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--line);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .dot-day.done {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: white;
+  }
+
+  .dot-day.done::after {
+    content: '✓';
+    font-size: 12px;
+  }
+
+  .dot-day:not(.done)::after {
+    content: attr(data-day);
+  }
+
+  /* 打卡按钮在每个 day-card */
+  .checkin-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #f8f4ec;
+    border-top: 1px solid var(--line);
+    gap: 12px;
+  }
+
+  .checkin-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 20px;
+    border: 2px solid var(--gold);
+    background: white;
+    color: var(--gold);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .checkin-btn:hover {
+    background: var(--gold);
+    color: white;
+    transform: translateY(-1px);
+  }
+
+  .checkin-btn.checked {
+    background: var(--jade);
+    border-color: var(--jade);
+    color: white;
+    cursor: default;
+  }
+
+  .checkin-btn.checked:hover {
+    transform: none;
+  }
+
+  .checkin-status {
+    font-size: 11px;
+    color: var(--muted);
+    flex: 1;
+  }
+
+  .checkin-status.done-text {
+    color: var(--jade);
+    font-weight: 500;
+  }
+
+  /* 当天打卡后卡片变样式 */
+  .day-card.completed {
+    border-color: var(--jade);
+    opacity: 0.85;
+  }
+
+  .day-card.completed .day-number {
+    position: relative;
+  }
+
+  .day-card.completed .day-number::after {
+    content: '✓';
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+
+  /* 备注输入框 */
+  .note-input {
+    width: 100%;
+    border: 1px solid var(--line);
+    background: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--ink);
+    padding: 8px 10px;
+    resize: none;
+    border-radius: 2px;
+    margin-top: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+    display: none;
+  }
+
+  .note-input:focus { border-color: var(--gold); }
+  .note-input.visible { display: block; }
+
+  .saved-note {
+    font-size: 11px;
+    color: var(--jade);
+    font-style: italic;
+    margin-top: 4px;
+    padding: 4px 8px;
+    background: #e8f5ee;
+    border-left: 2px solid var(--jade);
+    display: none;
+  }
+
+  .saved-note.visible { display: block; }
+
+  /* 庆祝弹窗 */
+  .celebrate-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,18,8,0.7);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .celebrate-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .celebrate-box {
+    background: white;
+    padding: 40px 48px;
+    text-align: center;
+    max-width: 340px;
+    border-top: 6px solid var(--gold);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+  }
+
+  .celebrate-overlay.show .celebrate-box {
+    transform: translateY(0);
+  }
+
+  .celebrate-emoji { font-size: 48px; margin-bottom: 12px; }
+
+  .celebrate-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .celebrate-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  .celebrate-close {
+    padding: 10px 28px;
+    background: var(--gold);
+    color: white;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
+  }
+
+  .celebrate-close:hover { background: var(--red); }
+
+  /* 重置按钮 */
+  .reset-btn {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .reset-btn:hover { border-color: var(--red); color: var(--red); }
+</style>
+</head>
+<body>
+
+<div class="top-border"></div>
+
+<!-- 打卡进度面板 (sticky) -->
+<div class="checkin-panel">
+  <div class="checkin-panel-inner">
+    <span class="checkin-title">📅 打卡进度</span>
+    <div class="dots-row" id="dotsRow">
+      <div class="dot-day" data-day="1" title="Hari 1"></div>
+      <div class="dot-day" data-day="2" title="Hari 2"></div>
+      <div class="dot-day" data-day="3" title="Hari 3"></div>
+      <div class="dot-day" data-day="4" title="Hari 4"></div>
+      <div class="dot-day" data-day="5" title="Hari 5"></div>
+      <div class="dot-day" data-day="6" title="Hari 6"></div>
+      <div class="dot-day" data-day="7" title="Hari 7"></div>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+    <span class="progress-text" id="progressText">0 / 7</span>
+    <button class="reset-btn" onclick="resetAll()">重置</button>
+  </div>
+</div>
+
+<header>
+  <div class="seal">🖌</div>
+  <p class="subtitle">Pelan Pembelajaran 7 Hari</p>
+  <h1>Seni Oriental</h1>
+  <div style="margin-top:12px">
+    <span class="method-tag">极简学习法 · Kaedah Belajar Ekstrim</span>
+  </div>
+</header>
+
+<!-- Framework Banner -->
+<div class="framework">
+  <div class="framework-step step-1">
+    <div class="step-num">1</div>
+    <div class="step-label">精准输入</div>
+    <div class="step-desc">Baca sumber utama, bina asas</div>
+  </div>
+  <div class="framework-step step-2">
+    <div class="step-num">2</div>
+    <div class="step-label">深度消化</div>
+    <div class="step-desc">Faham dari akar, soal selidik</div>
+  </div>
+  <div class="framework-step step-3">
+    <div class="step-num">3</div>
+    <div class="step-label">多元输出</div>
+    <div class="step-desc">Tulis, ajar, aplikasi Feynman</div>
+  </div>
+</div>
+
+<main>
+
+  <!-- SMART Objective -->
+  <div class="objective-box">
+    <div class="smart-grid">
+      <div class="smart-item">
+        <span class="smart-letter">S</span>
+        <span class="smart-word">Specific</span>
+        <span class="smart-text">Kuasai Seni Islam, Cina, Jepun, India + 5 tokoh dalam 7 hari</span>
+      </div>
+      <div class="smart-item">
+        <span class="smart-letter">M</span>
+        <span class="smart-word">Measurable</span>
+        <span class="smart-text">Boleh hurai gaya & makna setiap aliran + bandingkan 5 tokoh</span>
+      </div>
+      <div class="smart-item">
+        <span class="smart-letter">A</span>
+        <span class="smart-word">Attainable</span>
+        <span class="smart-text">2–3 jam/hari, fokus satu topik sehari</span>
+      </div>
+      <div class="smart-item">
+        <span class="smart-letter">R</span>
+        <span class="smart-word">Relevant</span>
+        <span class="smart-text">Terus ke peperiksaan: latar belakang, ciri, gaya, makna</span>
+      </div>
+      <div class="smart-item">
+        <span class="smart-letter">T</span>
+        <span class="smart-word">Time-bound</span>
+        <span class="smart-text">Selesai dalam 7 hari. Ujian kendiri Hari ke-7</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DAY 1 ===== -->
+  <div class="day-card day-1">
+    <div class="day-header">
+      <div class="day-number">
+        <span class="day-num-big">01</span>
+        <span class="day-num-label">Isnin</span>
+      </div>
+      <div class="day-title-area">
+        <span class="day-phase-badge phase-input">📥 精准输入 — Fasa Input</span>
+        <div class="day-title">Gambaran Besar Seni Oriental</div>
+        <div class="day-focus">Bina kerangka, faham konteks — "baca kandungan daftar isi dahulu"</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <div class="time-block">
+        <div class="time-label">Pagi<br>60 min</div>
+        <div class="time-content">
+          <div class="time-activity">🗺️ Bina Peta Minda Seni Oriental</div>
+          <div class="time-detail">Tuliskan 4 cabang utama: Islam · Cina · Jepun · India. Untuk setiap cabang, catat: Tempat asal, Era, Bahan, Fungsi. Gunakan kaedah <em>membaca daftar isi</em> dari buku untuk melihat keseluruhan struktur.</div>
+          <span class="method-note">📖 Kaedah buku: "Baca daftar isi dahulu — nampak sistem keseluruhan"</span>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Tengah Hari<br>45 min</div>
+        <div class="time-content">
+          <div class="time-activity">📚 Lawatan Maya (IR 4.0) — Pertama</div>
+          <div class="time-detail">Layari Google Arts & Culture. Cari "Islamic Art", "Chinese Art", "Japanese Art", "Indian Art". Simpan 2–3 gambar yang menarik dari setiap kategori. <strong>Jangan baca panjang lebar</strong> — sekadar kenal pasti wajah seni.</div>
+          <div class="gallery-box" style="margin-top:8px">
+            <div class="gallery-box-title">🖥 Galeri Maya — Pautan Dicadangkan</div>
+            <div class="gallery-links">
+              <span class="gallery-link">arts.google.com</span>
+              <span class="gallery-link">metmuseum.org</span>
+              <span class="gallery-link">artsandculture.google.com</span>
+              <span class="gallery-link">britishmuseum.org</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Petang<br>30 min</div>
+        <div class="time-content">
+          <div class="time-activity">✏️ Isi Jadual Perbandingan Awal</div>
+          <div class="time-detail">Buat jadual 4 baris × 4 lajur (Aliran / Ciri Asas / Gaya / Makna). Isi apa yang sudah tahu — biarkan kosong. Ini adalah ujian awal kendiri (<em>sumber-ujian</em> dari buku).</div>
+          <span class="method-note">🔍 Kaedah buku: "Sumber-ujian: lihat apa yang sudah dan belum dikuasai"</span>
+        </div>
+      </div>
+    </div>
+    <div class="checkin-bar" id="bar-1">
+      <div style="flex:1">
+        <span class="checkin-status" id="status-1">尚未打卡 — 完成今天的学习后记录！</span>
+        <textarea class="note-input" id="note-1" rows="2" placeholder="写下今天的学习感想或笔记…" oninput="saveNote(1)"></textarea>
+        <div class="saved-note" id="saved-note-1"></div>
+      </div>
+      <button class="checkin-btn" id="btn-1" onclick="checkIn(1)">✏️ 打卡 Hari 1</button>
+    </div>
+  </div>
+
+  <!-- ===== DAY 2 ===== -->
+  <div class="day-card day-2">
+    <div class="day-header">
+      <div class="day-number">
+        <span class="day-num-big">02</span>
+        <span class="day-num-label">Selasa</span>
+      </div>
+      <div class="day-title-area">
+        <span class="day-phase-badge phase-input">📥 精准输入 — Fasa Input</span>
+        <div class="day-title">Seni Islam + Seni Cina</div>
+        <div class="day-focus">Kuasai 2 aliran hari ini — "belajar dari akar"</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <div class="time-block">
+        <div class="time-label">Pagi<br>50 min</div>
+        <div class="time-content">
+          <div class="time-activity">🕌 SENI ISLAM — Input Mendalam</div>
+          <div class="time-detail">Baca sumber utama (nota kuliah / buku teks). Fokus: Latar belakang (abad ke-7, dunia Islam), Ciri asas (geometri, kaligrafi, arabesque, larangan figuratif), Gaya (Mughal, Persia, Ottoman), Makna (keagungan Allah, bukan dekorasi semata).</div>
+          <div class="topics-grid">
+            <div class="topic-chip">📐 Geometri & Pola</div>
+            <div class="topic-chip">✍️ Kaligrafi Arab</div>
+            <div class="topic-chip">🌿 Arabesque</div>
+            <div class="topic-chip">🕌 Seni Bina Masjid</div>
+          </div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Tengah Hari<br>20 min</div>
+        <div class="time-content">
+          <div class="time-activity">🔄 Mini Feynman — Seni Islam</div>
+          <div class="time-detail">Tutup nota. Terangkan Seni Islam kepada diri sendiri seperti mengajar rakan. Jika terkantoi — tandakan bahagian yang tidak faham.</div>
+          <span class="method-note">🧠 Kaedah buku: "Feynman — jika tak boleh terangkan dengan mudah, bererti belum faham"</span>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Petang<br>50 min</div>
+        <div class="time-content">
+          <div class="time-activity">🐉 SENI CINA — Input Mendalam</div>
+          <div class="time-detail">Baca sumber utama. Fokus: Latar belakang (tradisi 5000 tahun), Ciri asas (landskap/shan shui, kaligrafi cina, tinta & berus), Gaya (Dinasti Tang, Song, Ming), Makna (harmoni alam, falsafah Taoisme & Konfusianisme).</div>
+          <div class="topics-grid">
+            <div class="topic-chip">🏔️ Lukisan Shan Shui</div>
+            <div class="topic-chip">🖌️ Tinta & Berus</div>
+            <div class="topic-chip">🏺 Seramik & Porselin</div>
+            <div class="topic-chip">☯️ Makna Taoisme</div>
+          </div>
+          <span class="method-note">📝 Tulis nota ringkas — gunakan teknik "夹心饼" (input baru diapit dengan yang lama)</span>
+        </div>
+      </div>
+    </div>
+    <div class="checkin-bar" id="bar-2">
+      <div style="flex:1">
+        <span class="checkin-status" id="status-2">尚未打卡 — 完成今天的学习后记录！</span>
+        <textarea class="note-input" id="note-2" rows="2" placeholder="写下今天的学习感想或笔记…" oninput="saveNote(2)"></textarea>
+        <div class="saved-note" id="saved-note-2"></div>
+      </div>
+      <button class="checkin-btn" id="btn-2" onclick="checkIn(2)">✏️ 打卡 Hari 2</button>
+    </div>
+  </div>
+
+  <!-- ===== DAY 3 ===== -->
+  <div class="day-card day-3">
+    <div class="day-header">
+      <div class="day-number">
+        <span class="day-num-big">03</span>
+        <span class="day-num-label">Rabu</span>
+      </div>
+      <div class="day-title-area">
+        <span class="day-phase-badge phase-input">📥 精准输入 — Fasa Input</span>
+        <div class="day-title">Seni Jepun + Seni India</div>
+        <div class="day-focus">Lengkapkan 4 aliran Oriental — fokus pada perbezaan unik</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <div class="time-block">
+        <div class="time-label">Pagi<br>50 min</div>
+        <div class="time-content">
+          <div class="time-activity">🌸 SENI JEPUN — Input Mendalam</div>
+          <div class="time-detail">Baca sumber utama. Fokus: Latar belakang (pengaruh Cina, zaman Edo), Ciri asas (wabi-sabi, ma [ruang kosong], kesederhanaan), Gaya (ukiyo-e, sumi-e, ikebana), Makna (keindahan sementara, alam musim).</div>
+          <div class="topics-grid">
+            <div class="topic-chip">🎋 Wabi-Sabi</div>
+            <div class="topic-chip">🗻 Ukiyo-e (Woodblock)</div>
+            <div class="topic-chip">⛩️ Seni Bina Shinto</div>
+            <div class="topic-chip">🌸 Ikebana & Origami</div>
+          </div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Tengah Hari<br>20 min</div>
+        <div class="time-content">
+          <div class="time-activity">🔄 Mini Feynman — Seni Jepun</div>
+          <div class="time-detail">Bandingkan Seni Jepun dengan Seni Cina secara lisan. Apa persamaan? Apa perbezaan? Catat dalam jadual.</div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Petang<br>50 min</div>
+        <div class="time-content">
+          <div class="time-activity">🪷 SENI INDIA — Input Mendalam</div>
+          <div class="time-detail">Baca sumber utama. Fokus: Latar belakang (pengaruh Hindu & Buddha), Ciri asas (warna terang, figura dewa, ornamen kaya), Gaya (Mughal miniatur, ukiran batu kuil), Makna (keagamaan Hindu-Buddha, kosmos dan jiwa).</div>
+          <div class="topics-grid">
+            <div class="topic-chip">🪷 Ukiran Kuil Hindu</div>
+            <div class="topic-chip">🎨 Miniatur Mughal</div>
+            <div class="topic-chip">💃 Tari & Muzik Klasik</div>
+            <div class="topic-chip">☸️ Makna Dharma</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkin-bar" id="bar-3">
+      <div style="flex:1">
+        <span class="checkin-status" id="status-3">尚未打卡 — 完成今天的学习后记录！</span>
+        <textarea class="note-input" id="note-3" rows="2" placeholder="写下今天的学习感想或笔记…" oninput="saveNote(3)"></textarea>
+        <div class="saved-note" id="saved-note-3"></div>
+      </div>
+      <button class="checkin-btn" id="btn-3" onclick="checkIn(3)">✏️ 打卡 Hari 3</button>
+    </div>
+  </div>
+
+  <!-- ===== DAY 4 ===== -->
+  <div class="day-card day-4">
+    <div class="day-header">
+      <div class="day-number">
+        <span class="day-num-big">04</span>
+        <span class="day-num-label">Khamis</span>
+      </div>
+      <div class="day-title-area">
+        <span class="day-phase-badge phase-digest">🔬 深度消化 — Fasa Hadam</span>
+        <div class="day-title">5 Tokoh Seni — Gaya & Makna</div>
+        <div class="day-focus">Andy Warhol · Hassan Mossoudy · Su Shi · Katsushika Hokusai · Amrita Sher-Gil</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <div class="time-block">
+        <div class="time-label">Pagi<br>30 min</div>
+        <div class="time-content">
+          <div class="time-activity">🎨 Andy Warhol (Seni Barat — Pop Art)</div>
+          <div class="time-detail">Gaya: warna cerah, imej massa, teknik silkscreen. Makna: kritikan masyarakat pengguna, budaya popular sebagai seni. Karya: Campbell's Soup, Marilyn Monroe.</div>
+          <div class="artists-row">
+            <span class="artist-chip artist-west">🇺🇸 Pop Art</span>
+            <span class="artist-chip artist-west">🏭 Mass Culture</span>
+          </div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Pagi<br>25 min</div>
+        <div class="time-content">
+          <div class="time-activity">✍️ Hassan Mossoudy (Seni Islam — Kaligrafi)</div>
+          <div class="time-detail">Gaya: kaligrafi Arab moden, gabungan tradisi & kontemporari. Makna: firman Tuhan menjadi seni visual, spiritualiti Islam melalui huruf. Tokoh kaligrafi Iraq bertaraf dunia.</div>
+          <div class="artists-row">
+            <span class="artist-chip artist-islam">🕌 Kaligrafi Arab</span>
+            <span class="artist-chip artist-islam">📜 Spiritualiti</span>
+          </div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Tengah Hari<br>25 min</div>
+        <div class="time-content">
+          <div class="time-activity">🖌️ Su Shi (Seni Cina — Puisi, Lukisan, Kaligrafi)</div>
+          <div class="time-detail">Gaya: "satu-tiga" (shī-shū-huà), tinta hitam, landskap kabur. Makna: seni sebagai ekspresi jiwa, bukan semata kemahiran teknikal. Dinasti Song, ahli falsafah dan penyair.</div>
+          <div class="artists-row">
+            <span class="artist-chip artist-china">🐉 Dinasti Song</span>
+            <span class="artist-chip artist-china">🖋️ Shī-Shū-Huà</span>
+          </div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Petang<br>25 min</div>
+        <div class="time-content">
+          <div class="time-activity">🌊 Katsushika Hokusai (Seni Jepun — Ukiyo-e)</div>
+          <div class="time-detail">Gaya: cetak kayu warna (woodblock), komposisi berani, garisan kuat. Makna: kuasa alam, manusia kecil vs alam besar. Karya ikonik: "The Great Wave off Kanagawa".</div>
+          <div class="artists-row">
+            <span class="artist-chip artist-japan">🌸 Ukiyo-e</span>
+            <span class="artist-chip artist-japan">🌊 Alam & Manusia</span>
+          </div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Petang<br>25 min</div>
+        <div class="time-content">
+          <div class="time-activity">🪷 Amrita Sher-Gil (Seni India — Moden)</div>
+          <div class="time-detail">Gaya: gabungan Eropah (Post-Impressionism) + India tradisi, warna hangat, figura wanita. Makna: kehidupan wanita India, identiti antara dua dunia. Perintis seni moden India.</div>
+          <div class="artists-row">
+            <span class="artist-chip artist-india">🪷 India Moden</span>
+            <span class="artist-chip artist-india">🎨 Hibrid Timur-Barat</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkin-bar" id="bar-4">
+      <div style="flex:1">
+        <span class="checkin-status" id="status-4">尚未打卡 — 完成今天的学习后记录！</span>
+        <textarea class="note-input" id="note-4" rows="2" placeholder="写下今天的学习感想或笔记…" oninput="saveNote(4)"></textarea>
+        <div class="saved-note" id="saved-note-4"></div>
+      </div>
+      <button class="checkin-btn" id="btn-4" onclick="checkIn(4)">✏️ 打卡 Hari 4</button>
+    </div>
+  </div>
+
+  <!-- ===== DAY 5 ===== -->
+  <div class="day-card day-5">
+    <div class="day-header">
+      <div class="day-number">
+        <span class="day-num-big">05</span>
+        <span class="day-num-label">Jumaat</span>
+      </div>
+      <div class="day-title-area">
+        <span class="day-phase-badge phase-digest">🔬 深度消化 — Fasa Hadam</span>
+        <div class="day-title">Konsol & Perbaiki Kefahaman</div>
+        <div class="day-focus">Cari lubang pengetahuan — "自查" (ujian diri) + Lawatan Galeri Maya</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <div class="time-block">
+        <div class="time-label">Pagi<br>40 min</div>
+        <div class="time-content">
+          <div class="time-activity">📋 Ujian Diri dengan Jadual Perbandingan</div>
+          <div class="time-detail">Isi semula jadual dari Hari 1 (tanpa melihat nota). Bandingkan: mana yang kosong = lubang pengetahuan. Fokus isi kosong sahaja hari ini.</div>
+          <span class="method-note">🔍 Kaedah buku: "精准自查 — cari lubang dengan jujur, kemudian tambal"</span>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Tengah Hari<br>50 min</div>
+        <div class="time-content">
+          <div class="time-activity">🖥️ Lawatan Galeri Maya (IR 4.0) — Mendalam</div>
+          <div class="time-detail">Kunjungi galeri maya secara sistematik. Untuk setiap karya yang dilihat: <strong>Siapa pelukis? Aliran apa? Apakah maknanya?</strong> Cuba teka dahulu sebelum baca keterangan.</div>
+          <div class="gallery-box">
+            <div class="gallery-box-title">🌐 Galeri Maya Disyorkan</div>
+            <div class="gallery-links">
+              <span class="gallery-link">Islamic: metmuseum.org/art/collection/islamic</span>
+              <span class="gallery-link">Cina: npm.gov.tw (virtual)</span>
+              <span class="gallery-link">Jepun: e-museum.nich.go.jp</span>
+              <span class="gallery-link">India: nationalmuseumindia.gov.in</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Petang<br>30 min</div>
+        <div class="time-content">
+          <div class="time-activity">🔍 Tambal Lubang Pengetahuan</div>
+          <div class="time-detail">Kembali ke nota — isi bahagian yang masih kosong dalam jadual. Gunakan kaedah "dari yang diketahui ke yang tidak diketahui" (把已知应用到未知).</div>
+          <span class="method-note">💡 Kaedah buku: "Guna pengetahuan yang ada untuk faham yang baru — paling mudah untuk mula"</span>
+        </div>
+      </div>
+    </div>
+    <div class="checkin-bar" id="bar-5">
+      <div style="flex:1">
+        <span class="checkin-status" id="status-5">尚未打卡 — 完成今天的学习后记录！</span>
+        <textarea class="note-input" id="note-5" rows="2" placeholder="写下今天的学习感想或笔记…" oninput="saveNote(5)"></textarea>
+        <div class="saved-note" id="saved-note-5"></div>
+      </div>
+      <button class="checkin-btn" id="btn-5" onclick="checkIn(5)">✏️ 打卡 Hari 5</button>
+    </div>
+  </div>
+
+  <!-- ===== DAY 6 ===== -->
+  <div class="day-card day-6">
+    <div class="day-header">
+      <div class="day-number">
+        <span class="day-num-big">06</span>
+        <span class="day-num-label">Sabtu</span>
+      </div>
+      <div class="day-title-area">
+        <span class="day-phase-badge phase-output">📤 多元输出 — Fasa Output</span>
+        <div class="day-title">Latihan Output Pelbagai Bentuk</div>
+        <div class="day-focus">Feynman · Peta Minda · Esei Pendek · Perbandingan Tokoh</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <div class="time-block">
+        <div class="time-label">Pagi<br>40 min</div>
+        <div class="time-content">
+          <div class="time-activity">🎤 Teknik Feynman — Ajar Kawan Khayalan</div>
+          <div class="time-detail">Pilih 2 aliran Oriental. Terangkan secara lisan (atau tulis) kepada "kawan yang tidak tahu seni" dalam bahasa mudah. Masa: 10 minit setiap aliran. Rekod suara jika perlu.</div>
+          <span class="method-note">📖 Kaedah buku: "费曼学习法 — jika tak boleh terangkan mudah, bererti belum faham benar"</span>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Pagi<br>30 min</div>
+        <div class="time-content">
+          <div class="time-activity">🗺️ Peta Minda Lengkap — Tokoh & Karya</div>
+          <div class="time-detail">Bina peta minda dari ingatan sahaja: 5 tokoh → gaya → makna → karya penting. Semak dengan nota selepas selesai. Tandakan mana yang silap.</div>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Petang<br>50 min</div>
+        <div class="time-content">
+          <div class="time-activity">✍️ Tulis Esei Pendek: Barat vs Oriental</div>
+          <div class="time-detail">Tulis 300–400 patah perkataan: <em>"Bandingkan perspektif gaya dan makna antara Seni Barat (Andy Warhol) dengan mana-mana satu seni Oriental. Gunakan contoh karya yang spesifik."</em></div>
+          <ul class="checklist">
+            <li><div class="check-box"></div>Nyatakan gaya masing-masing dengan jelas</li>
+            <li><div class="check-box"></div>Bandingkan makna di sebalik karya</li>
+            <li><div class="check-box"></div>Gunakan sekurang-kurangnya 2 karya sebagai bukti</li>
+            <li><div class="check-box"></div>Kesimpulan persamaan atau perbezaan</li>
+          </ul>
+          <span class="method-note">📝 Kaedah buku: "表达型输出 — menulis adalah cara terbaik untuk menguji kefahaman"</span>
+        </div>
+      </div>
+    </div>
+    <div class="checkin-bar" id="bar-6">
+      <div style="flex:1">
+        <span class="checkin-status" id="status-6">尚未打卡 — 完成今天的学习后记录！</span>
+        <textarea class="note-input" id="note-6" rows="2" placeholder="写下今天的学习感想或笔记…" oninput="saveNote(6)"></textarea>
+        <div class="saved-note" id="saved-note-6"></div>
+      </div>
+      <button class="checkin-btn" id="btn-6" onclick="checkIn(6)">✏️ 打卡 Hari 6</button>
+    </div>
+  </div>
+
+  <!-- ===== DAY 7 ===== -->
+  <div class="day-card day-7">
+    <div class="day-header">
+      <div class="day-number">
+        <span class="day-num-big">07</span>
+        <span class="day-num-label">Ahad</span>
+      </div>
+      <div class="day-title-area">
+        <span class="day-phase-badge phase-mixed">✅ 闭环完成 — Kitaran Lengkap</span>
+        <div class="day-title">Semakan Akhir + Simulasi Peperiksaan</div>
+        <div class="day-focus">Ulang kaji · Ujian kendiri · Tampal lubang akhir</div>
+      </div>
+    </div>
+    <div class="day-content">
+      <div class="time-block">
+        <div class="time-label">Pagi<br>30 min</div>
+        <div class="time-content">
+          <div class="time-activity">🔁 Ulang Kaji Sepintas Lalu (Peta Minda)</div>
+          <div class="time-detail">Lihat peta minda Hari 1 dan Hari 6. Baca nota penting sahaja (bukan baca semua). Fokus pada bahagian yang pernah silap atau tidak pasti.</div>
+          <span class="method-note">📖 Kaedah buku: "多 — baca berulang kali, setiap kali ada penemuan baru"</span>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Pagi<br>50 min</div>
+        <div class="time-content">
+          <div class="time-activity">📝 Simulasi Peperiksaan — Soalan Ramalan</div>
+          <div class="time-detail">Jawab soalan-soalan ini <strong>tanpa melihat nota</strong> dalam masa 45 minit:</div>
+          <ul class="checklist">
+            <li><div class="check-box"></div>Jelaskan ciri asas Seni Islam dan berikan 2 contoh.</li>
+            <li><div class="check-box"></div>Apakah perbezaan utama antara Seni Cina dan Seni Jepun dari segi gaya dan makna?</li>
+            <li><div class="check-box"></div>Bandingkan karya Katsushika Hokusai dengan Hassan Mossoudy dari perspektif gaya.</li>
+            <li><div class="check-box"></div>Apakah sumbangan Amrita Sher-Gil kepada Seni India moden?</li>
+            <li><div class="check-box"></div>Huraikan bagaimana Lawatan Galeri Maya (IR 4.0) boleh membantu pemahaman Seni Oriental.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Tengah Hari<br>30 min</div>
+        <div class="time-content">
+          <div class="time-activity">🔍 Semak & Tambal Jawapan Akhir</div>
+          <div class="time-detail">Bandingkan jawapan dengan nota. Isi lubang yang masih ada. Baca semula esei Hari 6 — perbaiki jika perlu.</div>
+          <span class="method-note">✅ Kaedah buku: "精准自查 + 真正拿下 — periksa, tambal, selesai"</span>
+        </div>
+      </div>
+      <div class="time-block">
+        <div class="time-label">Petang<br>20 min</div>
+        <div class="time-content">
+          <div class="time-activity">🎉 Perayaan & Refleksi</div>
+          <div class="time-detail">Tulis 5 perkara yang berjaya dipelajari minggu ini. Tulis 2 perkara yang masih perlu dikukuhkan. <strong>Anda telah berjaya!</strong> Kitaran 极简学习法 lengkap.</div>
+        </div>
+      </div>
+    </div>
+    <div class="checkin-bar" id="bar-7">
+      <div style="flex:1">
+        <span class="checkin-status" id="status-7">尚未打卡 — 完成最后一天，打卡庆祝！🎉</span>
+        <textarea class="note-input" id="note-7" rows="2" placeholder="写下这一周最大的收获…" oninput="saveNote(7)"></textarea>
+        <div class="saved-note" id="saved-note-7"></div>
+      </div>
+      <button class="checkin-btn" id="btn-7" onclick="checkIn(7)">🏆 打卡 Hari 7</button>
+    </div>
+  </div>
+
+  <!-- Summary Table -->
+  <table class="summary-table">
+    <tr>
+      <th>Hari</th>
+      <th>Fasa</th>
+      <th>Topik Utama</th>
+      <th>Output / Bukti Belajar</th>
+    </tr>
+    <tr>
+      <td><strong>Hari 1</strong></td>
+      <td><span class="phase-dot" style="background:var(--red)"></span>精准输入</td>
+      <td>Gambaran Besar Oriental</td>
+      <td>Peta minda + jadual perbandingan awal</td>
+    </tr>
+    <tr>
+      <td><strong>Hari 2</strong></td>
+      <td><span class="phase-dot" style="background:var(--red)"></span>精准输入</td>
+      <td>Seni Islam + Seni Cina</td>
+      <td>Nota ringkas + mini Feynman Islam</td>
+    </tr>
+    <tr>
+      <td><strong>Hari 3</strong></td>
+      <td><span class="phase-dot" style="background:var(--red)"></span>精准输入</td>
+      <td>Seni Jepun + Seni India</td>
+      <td>Nota ringkas + mini Feynman Jepun</td>
+    </tr>
+    <tr>
+      <td><strong>Hari 4</strong></td>
+      <td><span class="phase-dot" style="background:var(--gold)"></span>深度消化</td>
+      <td>5 Tokoh Seni</td>
+      <td>Carta tokoh: gaya + makna + karya</td>
+    </tr>
+    <tr>
+      <td><strong>Hari 5</strong></td>
+      <td><span class="phase-dot" style="background:var(--gold)"></span>深度消化</td>
+      <td>Ujian diri + Galeri Maya</td>
+      <td>Jadual perbandingan lengkap</td>
+    </tr>
+    <tr>
+      <td><strong>Hari 6</strong></td>
+      <td><span class="phase-dot" style="background:var(--jade)"></span>多元输出</td>
+      <td>Output Pelbagai Bentuk</td>
+      <td>Esei 300–400 kata + peta minda dari ingatan</td>
+    </tr>
+    <tr>
+      <td><strong>Hari 7</strong></td>
+      <td><span class="phase-dot" style="background:#555"></span>闭环完成</td>
+      <td>Semakan + Simulasi Peperiksaan</td>
+      <td>5 soalan dijawab tanpa nota</td>
+    </tr>
+  </table>
+
+  <!-- Tips from the book -->
+  <div class="tips-section">
+    <div class="tips-title">💡 Tip Utama dari 《极简学习法》</div>
+    <div class="tips-grid">
+      <div class="tip-item">
+        <div class="tip-title">🎯 倒推思维 — Fikir Terbalik</div>
+        <div class="tip-text">Mulakan dari matlamat (peperiksaan), bukan dari awal. Tanya: "Apa yang perlu saya tahu untuk jawab soalan?" Belajar itu, bukan lebih.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-title">🧠 费曼技巧 — Teknik Feynman</div>
+        <div class="tip-text">Selepas belajar, tutup buku. Cuba terangkan kepada kawan khayalan. Jika terkantoi, itu bahagian yang belum benar-benar faham.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-title">⏰ 72小时法则 — Peraturan 72 Jam</div>
+        <div class="tip-text">Selepas rancang, mesti mula dalam 72 jam. Jika tidak, mungkin tidak akan mula langsung. Mulakan hari ini!</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-title">🌿 钝感力 — Kuasa Jiwa Tebal</div>
+        <div class="tip-text">Jangan stress berlebihan. Percaya diri bahawa anda boleh belajar sebarang perkara. Ketenangan membantu otak serap lebih baik.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-title">📖 教材第一 — Nota/Buku Teks Dahulu</div>
+        <div class="tip-text">Baca nota kuliah & buku teks dulu — bukan YouTube atau ringkasan orang lain. Sumber asal adalah yang paling tepat untuk peperiksaan.</div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-title">🔗 串联知识 — Kaitkan Pengetahuan</div>
+        <div class="tip-text">Cari persamaan antara Seni Islam, Cina, Jepun, India. Apabila dapat kaitkan, lebih mudah ingat dan faham secara mendalam.</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Pelan ini dibina berdasarkan 《极简学习法》oleh 廖恒 · 输入 → 消化 → 输出 · Selamat Belajar！
+</footer>
+
+<!-- 庆祝弹窗 -->
+<div class="celebrate-overlay" id="celebrateOverlay">
+  <div class="celebrate-box">
+    <div class="celebrate-emoji" id="celebrateEmoji">🎉</div>
+    <div class="celebrate-title" id="celebrateTitle">打卡成功！</div>
+    <div class="celebrate-sub" id="celebrateSub">继续保持，你做得很好！</div>
+    <button class="celebrate-close" onclick="closeCelebrate()">继续加油 💪</button>
+  </div>
+</div>
+
+<script>
+  const STORAGE_KEY = 'seni_oriental_checkin';
+
+  const messages = {
+    1: { emoji: '🗺️', title: 'Hari 1 完成！', sub: '你已建立学习框架，基础打好了！\n明天：Seni Islam + Seni Cina 📥' },
+    2: { emoji: '🕌', title: 'Hari 2 完成！', sub: 'Seni Islam & Cina 已掌握！\n明天：Seni Jepun + Seni India 📥' },
+    3: { emoji: '🌸', title: 'Hari 3 完成！', sub: '4 大东方艺术流派全部输入完毕！\n明天：深入研究 5 位艺术家 🔬' },
+    4: { emoji: '🎨', title: 'Hari 4 完成！', sub: '5 位艺术家的风格与意义已掌握！\n明天：自查漏洞 + 虚拟画廊参观 🔬' },
+    5: { emoji: '🔍', title: 'Hari 5 完成！', sub: '知识漏洞已填补！消化阶段完成。\n明天：多元输出练习 📤' },
+    6: { emoji: '✍️', title: 'Hari 6 完成！', sub: '费曼技巧 + 作文输出完成！\n明天：最终模拟考试 🏆' },
+    7: { emoji: '🏆', title: '恭喜！全部完成！', sub: '你已完成「极简学习法」完整闭环！\n输入 → 消化 → 输出 ✓\nSelamat! Anda berjaya! 🎊' },
+  };
+
+  // Load state from localStorage
+  function loadState() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    } catch { return {}; }
+  }
+
+  function saveState(state) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch {}
+  }
+
+  function updateUI() {
+    const state = loadState();
+    let count = 0;
+
+    for (let d = 1; d <= 7; d++) {
+      const done = !!state[`day${d}`];
+      if (done) count++;
+
+      // Dot in progress bar
+      const dot = document.querySelector(`.dot-day[data-day="${d}"]`);
+      if (dot) dot.classList.toggle('done', done);
+
+      // Card border
+      const card = document.querySelector(`.day-${d}`);
+      if (card) card.classList.toggle('completed', done);
+
+      // Button
+      const btn = document.getElementById(`btn-${d}`);
+      if (btn) {
+        if (done) {
+          btn.textContent = '✅ Selesai!';
+          btn.classList.add('checked');
+          btn.disabled = true;
+        } else {
+          btn.disabled = false;
+        }
+      }
+
+      // Status text
+      const status = document.getElementById(`status-${d}`);
+      if (status) {
+        if (done) {
+          const ts = state[`day${d}_time`] || '';
+          status.textContent = `✅ 已打卡${ts ? ' · ' + ts : ''}`;
+          status.classList.add('done-text');
+        } else {
+          status.classList.remove('done-text');
+        }
+      }
+
+      // Note
+      const noteEl = document.getElementById(`note-${d}`);
+      const savedNoteEl = document.getElementById(`saved-note-${d}`);
+      const savedNote = state[`day${d}_note`] || '';
+      if (noteEl) {
+        if (done) {
+          noteEl.classList.remove('visible');
+        } else {
+          // Keep visible if has content
+          if (noteEl.value) noteEl.classList.add('visible');
+        }
+        noteEl.value = savedNote;
+      }
+      if (savedNoteEl) {
+        if (done && savedNote) {
+          savedNoteEl.textContent = '📝 ' + savedNote;
+          savedNoteEl.classList.add('visible');
+        } else {
+          savedNoteEl.classList.remove('visible');
+        }
+      }
+    }
+
+    // Progress bar
+    const pct = (count / 7) * 100;
+    const fill = document.getElementById('progressFill');
+    const txt = document.getElementById('progressText');
+    if (fill) fill.style.width = pct + '%';
+    if (txt) txt.textContent = `${count} / 7`;
+  }
+
+  function checkIn(day) {
+    const state = loadState();
+    if (state[`day${day}`]) return; // already checked in
+
+    const now = new Date();
+    const timeStr = now.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' })
+                  + ' ' + now.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+
+    state[`day${day}`] = true;
+    state[`day${day}_time`] = timeStr;
+
+    // Save current note
+    const noteEl = document.getElementById(`note-${day}`);
+    if (noteEl && noteEl.value.trim()) {
+      state[`day${day}_note`] = noteEl.value.trim();
+    }
+
+    saveState(state);
+    updateUI();
+    showCelebrate(day);
+  }
+
+  function saveNote(day) {
+    const state = loadState();
+    const noteEl = document.getElementById(`note-${day}`);
+    if (noteEl) {
+      state[`day${day}_note`] = noteEl.value;
+      saveState(state);
+      // Show textarea
+      if (noteEl.value) noteEl.classList.add('visible');
+    }
+  }
+
+  function showNoteInput(day) {
+    const noteEl = document.getElementById(`note-${day}`);
+    if (noteEl) noteEl.classList.toggle('visible');
+  }
+
+  function showCelebrate(day) {
+    const m = messages[day] || { emoji: '🎉', title: '打卡成功！', sub: '继续加油！' };
+    document.getElementById('celebrateEmoji').textContent = m.emoji;
+    document.getElementById('celebrateTitle').textContent = m.title;
+    document.getElementById('celebrateSub').textContent = m.sub;
+    const overlay = document.getElementById('celebrateOverlay');
+    overlay.classList.add('show');
+
+    // Auto-close after 5s for non-final days
+    if (day < 7) {
+      setTimeout(closeCelebrate, 5000);
+    }
+  }
+
+  function closeCelebrate() {
+    document.getElementById('celebrateOverlay').classList.remove('show');
+  }
+
+  function resetAll() {
+    if (confirm('确定要重置所有打卡记录吗？')) {
+      try { localStorage.removeItem(STORAGE_KEY); } catch {}
+      updateUI();
+    }
+  }
+
+  // Show note input on click for unchecked days
+  document.addEventListener('DOMContentLoaded', function () {
+    updateUI();
+
+    for (let d = 1; d <= 7; d++) {
+      const bar = document.getElementById(`bar-${d}`);
+      const noteEl = document.getElementById(`note-${d}`);
+      if (bar && noteEl) {
+        // Click on status area to toggle note input
+        const status = document.getElementById(`status-${d}`);
+        if (status) {
+          status.style.cursor = 'pointer';
+          status.title = '点击展开备注框';
+          status.addEventListener('click', function () {
+            const state = loadState();
+            if (!state[`day${d}`]) {
+              noteEl.classList.toggle('visible');
+              if (noteEl.classList.contains('visible')) noteEl.focus();
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
